@@ -24,7 +24,8 @@ public class PlayerControler : MonoBehaviour
         float y = Input.GetAxis("Vertical");
         
         Vector3 force = new Vector3(x, 0, y);
-        force.Normalize();
+        //force.Normalize();
+   
 
         //force += speed;
 

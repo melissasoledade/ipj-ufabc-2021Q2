@@ -1,3 +1,6 @@
+// Código visto na documentação do Unity (link abaixo) sobre criação de carrinho simples de corrida
+// https://docs.unity3d.com/Manual/WheelColliderTutorial.html
+
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;

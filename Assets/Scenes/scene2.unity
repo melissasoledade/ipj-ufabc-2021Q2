@@ -456,6 +456,7 @@ GameObject:
   - component: {fileID: 196820457}
   - component: {fileID: 196820456}
   - component: {fileID: 196820455}
+  - component: {fileID: 196820459}
   m_Layer: 0
   m_Name: LapCompleteTrigger
   m_TagString: Untagged
@@ -471,7 +472,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196820454}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -483,7 +484,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196820454}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -539,6 +540,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &196820459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196820454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924ee405b16f25f4395d83c7795e618d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LapCompleteTrig: {fileID: 196820454}
+  HalfLapTrig: {fileID: 813126681}
+  MinuteDisplay: {fileID: 1150900025}
+  SecondDisplay: {fileID: 2111765778}
+  MilliDisplay: {fileID: 509787072}
+  LapTimeBox: {fileID: 0}
 --- !u!1001 &270817375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -731,7 +750,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 50
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -1636,7 +1655,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 50
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -1691,7 +1710,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813126681}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1973,7 +1992,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 50
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -4036,7 +4055,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 50
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -4749,6 +4768,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b092f86c14ad5143b6255cd229d23dd, type: 3}
+--- !u!1 &1930047046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930047048}
+  - component: {fileID: 1930047047}
+  m_Layer: 0
+  m_Name: LapTimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1930047047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930047046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437439ab61ba4e14bb63298eccbd5f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinuteBox: {fileID: 1409118951}
+  SecondBox: {fileID: 127748319}
+  MilliBox: {fileID: 1673164722}
+--- !u!4 &1930047048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930047046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 611.9823, y: 44.80027, z: 406.29092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1935775798
 GameObject:
   m_ObjectHideFlags: 0

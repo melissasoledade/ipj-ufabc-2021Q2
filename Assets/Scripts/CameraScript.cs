@@ -1,3 +1,6 @@
+// Script utilizado para a câmera acompanhar a visão do player 
+// Main camera é "filho" de Player (objeto denominado 'car_root' no unity)
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,13 +13,6 @@ public class CameraScript : MonoBehaviour
     public float playerY;
     public float playerZ;
 
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        
-    }*/
-
-    // Update is called once per frame
     void Update()
     {
      playerX = player.transform.eulerAngles.x;

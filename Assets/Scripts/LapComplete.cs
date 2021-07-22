@@ -1,4 +1,4 @@
-// Atualiza Best Time Box
+// Atualiza Best Time Box com o melhor tempo de volta na pista
 
 using System.Collections;
 using System.Collections.Generic;

@@ -1,3 +1,5 @@
+// Ativa o trigger para finalizar uma volta na pista
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

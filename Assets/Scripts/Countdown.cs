@@ -9,7 +9,7 @@ public class Countdown : MonoBehaviour {
 	public AudioSource GetReady;
 	public AudioSource GoAudio;
 	public GameObject LapTimer;
-	//public GameObject CarControls;
+
 	//public AudioSource LevelMusic;
 
 	void Start () {
@@ -36,7 +36,7 @@ public class Countdown : MonoBehaviour {
 		GoAudio.Play ();
 		//LevelMusic.Play ();
 		LapTimer.SetActive (true);
-		//CarControls.SetActive (true);
+		
 
 	}
 	

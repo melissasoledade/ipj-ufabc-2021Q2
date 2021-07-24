@@ -11,22 +11,31 @@ public class SimpleCarController : MonoBehaviour {
     public List<AxleInfo> axleInfos; // informação sobre cada eixo
     public float maxMotorTorque; // torque máximo aplicado na roda
     public float maxSteeringAngle; // ângulo máximo de direção que uma roda pode ter
+    public GameObject LapTimer;
         
     public void FixedUpdate()
     {
+
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
             
         foreach (AxleInfo axleInfo in axleInfos) {
-            if (axleInfo.steering) {
-                axleInfo.leftWheel.steerAngle = steering;
-                axleInfo.rightWheel.steerAngle = steering;
-            }
-            if (axleInfo.motor) {
-                axleInfo.leftWheel.motorTorque = motor;
-                axleInfo.rightWheel.motorTorque = motor;
-            }
+            
+                if (axleInfo.steering) {
+                    axleInfo.leftWheel.steerAngle = steering;
+                    axleInfo.rightWheel.steerAngle = steering;
+                }
+                if (axleInfo.motor) {
+                    axleInfo.leftWheel.motorTorque = motor;
+                    axleInfo.rightWheel.motorTorque = motor;
+                }
         }
+
+        if (LapTimer.activeSelf == false) {
+            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        }
+
+
     }
 }
     

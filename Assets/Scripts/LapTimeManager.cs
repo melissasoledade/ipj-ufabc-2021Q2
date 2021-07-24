@@ -15,6 +15,8 @@ public class LapTimeManager : MonoBehaviour
     public GameObject MinuteBox;
     public GameObject SecondBox;
     public GameObject MilliBox;
+    public GameObject Speed;
+    public GameObject car_root;
     void Update()
     {
         // Atualiza valor de millisegundo no box de texto da UI
@@ -47,6 +49,17 @@ public class LapTimeManager : MonoBehaviour
         else{
             MinuteBox.GetComponent<Text>().text = "" + MinuteCount + ":";
         }
+
+        float magnitude = car_root.GetComponent<Rigidbody>().velocity.magnitude;
+
+        if(magnitude < 10){
+            Speed.GetComponent<Text>().text = "  " + (int) magnitude;
+        }
+        else {
+            Speed.GetComponent<Text>().text = "" + (int) magnitude;
+        }
+
+        
 
     }
 }

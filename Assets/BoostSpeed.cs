@@ -10,6 +10,5 @@ public class BoostSpeed : MonoBehaviour {
         int boostSpeed = 50;
         Vector3 v = car_root.GetComponent<Rigidbody>().velocity.normalized;
         car_root.GetComponent<Rigidbody>().velocity = new Vector3(v.x * boostSpeed, v.y * boostSpeed, v.z * boostSpeed);
-        Debug.Log("entered");
     }
 }

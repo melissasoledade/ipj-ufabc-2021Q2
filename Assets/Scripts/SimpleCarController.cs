@@ -35,6 +35,12 @@ public class SimpleCarController : MonoBehaviour {
             this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
 
+        if (Input.GetKeyDown("space")) {
+            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            transform.position = new Vector3(transform.position.x, 13, transform.position.z);
+            transform.rotation = Quaternion.identity;
+        }
+
 
     }
 }

@@ -12,6 +12,8 @@ public class CameraScript : MonoBehaviour
     public float playerX;
     public float playerY;
     public float playerZ;
+    public Camera cameraFront;
+    public Camera cameraBack;
 
     void Update()
     {
@@ -20,6 +22,14 @@ public class CameraScript : MonoBehaviour
      playerZ = player.transform.eulerAngles.z;
 
      transform.eulerAngles = new Vector3(0, playerY, 0);
+
+     if (Input.GetKey("b")) {
+         cameraFront.enabled = false;
+         cameraBack.enabled = true;
+     } else {
+         cameraFront.enabled = true;
+         cameraBack.enabled = false;         
+     }
 
     }
 }
